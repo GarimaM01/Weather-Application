@@ -1,0 +1,149 @@
+/* Reset CSS */
+* {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  color: #000000; /* Default text color */
+}
+
+/* Body Styles */
+body {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Full height of the viewport */
+  margin: 0; /* Remove default margin */
+  background: #222; /* Background color */
+  background-image: url('https://source.unsplash.com/1600x900/?landscape'); /* Background image */
+}
+
+/* Card App Container */
+.card-app {
+  margin: 0 auto; /* Center the card horizontally */
+  padding: 1rem; /* Padding around the card */
+  position: relative; /* Positioning context for absolute positioning of child elements */
+  backdrop-filter: blur(5px) saturate(200%); /* Apply a backdrop filter for a frosted glass effect */
+  -webkit-backdrop-filter: blur(5px) saturate(200%); /* Vendor prefix for backdrop filter in Safari */
+  background-color: rgba(138, 127, 127, 0.315); /* Background color with transparency */
+  border-radius: 0.75rem; /* Rounded corners */
+  border: 1px solid rgba(209, 213, 219, 0.3); /* Border with transparency */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Arrange child elements in a column */
+  gap: 0.7rem; /* Spacing between child elements */
+}
+
+/* Temperature Min */
+p.temp-min {
+  margin-top: 1em; /* Top margin */
+}
+
+/* Time */
+p.time {
+  margin-top: 1em; /* Top margin */
+}
+
+/* Temperature Max */
+p.temp-max {
+  margin-bottom: 1em; /* Bottom margin */
+}
+
+/* Weather Description */
+.weather-desc {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center content vertically */
+  gap: 0.625em; /* Spacing between child elements */
+}
+
+/* Sunrise and Sunset Container */
+.sunrise-sunset {
+  margin-top: 1em; /* Top margin */
+  gap: 2rem; /* Spacing between child elements */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center content vertically */
+}
+
+/* Sunrise and Sunset Icon */
+.sunrise-sunset img {
+  height: 3em; /* Icon height */
+  width: 3em; /* Icon width */
+}
+
+/* Sunrise and Sunset */
+.sunrise,
+.sunset {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center content vertically */
+  gap: 0.2rem; /* Spacing between child elements */
+}
+
+/* Main Weather Container */
+.main-weather {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center content vertically */
+  gap: 0.6rem; /* Spacing between child elements */
+}
+
+/* Main Weather Icon and Text */
+.main-weather img,
+.main-weather p {
+  margin-right: 10px; /* Right margin */
+  gap: 0.2rem; /* Spacing between child elements */
+}
+
+/* Search Container */
+.search {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+/* Search Button */
+.btn-src {
+  margin: 0.5em; /* Margin around the button */
+  border-radius: 50%; /* Make button circular */
+  border: 1px solid rgb(255, 255, 255); /* Border style */
+  height: 40px; /* Button height */
+  width: 40px; /* Button width */
+  outline: none; /* Remove outline */
+  background: rgba(83, 82, 82, 0.5); /* Button background color with transparency */
+  color: white; /* Text color */
+  cursor: pointer; /* Cursor style */
+  transition: 0.2s ease-in-out; /* Transition effect */
+}
+
+/* Search Input */
+.search input {
+  border-radius: 1rem; /* Rounded corners */
+  border: 1px solid rgb(255, 255, 255); /* Border style */
+  padding: 0.6rem; /* Padding */
+  background: rgba(83, 82, 82, 0.5); /* Background color with transparency */
+  font-size: 1rem; /* Font size */
+}
+
+/* Button Hover Effect */
+button:hover {
+  background: #7c7c7c6b; /* Background color on hover */
+}
+
+/* Media Queries */
+@media only screen and (max-width: 480px),
+            screen and (max-height: 600px) {
+  /* Adjustments for smaller screens */
+  .card-app {
+    width: 300px; /* Set card width */
+    transform: translateY(-1%); /* Adjust vertical position */
+  }
+
+  .search input {
+    width: 200px; /* Set input width */
+    font-size: 1rem; /* Font size */
+    padding: 0.4rem 1rem; /* Padding */
+  }
+
+  .search img {
+    height: 3em; /* Icon height */
+    width: 3em; /* Icon width */
+  }
+}
